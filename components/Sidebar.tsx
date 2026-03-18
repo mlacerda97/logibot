@@ -22,7 +22,7 @@ export default function Sidebar() {
   // Tiramos o Cadastros daqui para montá-lo separado como Acordeão
   const menuItems = [
     { name: "Início (Extração)", href: "/", icon: Home },
-    { name: "Painel de Triagem", href: "/triagem", icon: Filter },
+    //{ name: "Painel de Triagem", href: "/triagem", icon: Filter },
     { name: "Montar Romaneio", href: "/romaneio", icon: Truck },
     { name: "Torre de Controle", href: "/torre", icon: Map },
   ];
