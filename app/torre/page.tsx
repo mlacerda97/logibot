@@ -1,4 +1,4 @@
-"use client"; // Corrigido para evitar o erro da image_be1e9c.png
+"use client";
 
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
@@ -12,7 +12,8 @@ import {
   MapPin, 
   X,
   ExternalLink,
-  Clock
+  Clock,
+  Trash2 // Adicionado ícone de lixeira
 } from "lucide-react";
 
 export default function TorreDeControlePage() {
@@ -26,7 +27,6 @@ export default function TorreDeControlePage() {
 
     const carregarViagens = async () => {
         setLoading(true);
-        // Busca os dados financeiros calculados pelo Python/OSRM
         const { data, error } = await supabase
             .from("viagens")
             .select(`
@@ -46,11 +46,36 @@ export default function TorreDeControlePage() {
         carregarViagens();
     }, []);
 
+    // ==========================================
+    // FUNÇÃO PARA EXCLUIR VIAGEM (RPC)
+    // ==========================================
+    const handleExcluirViagem = async (e: React.MouseEvent, viagemId: string) => {
+        e.stopPropagation(); // Impede que o clique abra o modal de detalhes
+        
+        const confirmar = confirm("Deseja realmente excluir este romaneio? As notas voltarão para a fila de montagem.");
+        
+        if (confirmar) {
+            try {
+                const { error } = await supabase.rpc('excluir_viagem_completa', { 
+                    id_da_viagem: viagemId 
+                });
+
+                if (error) throw error;
+
+                alert("Viagem excluída e notas liberadas! 🚀");
+                carregarViagens(); // Recarrega a lista sem dar F5 na página
+                if (viagemSelecionada?.id === viagemId) setViagemSelecionada(null);
+            } catch (err: any) {
+                console.error(err);
+                alert("Erro ao excluir: " + err.message);
+            }
+        }
+    };
+
     const abrirDetalhes = async (viagem: any) => {
         setViagemSelecionada(viagem);
         setCarregandoModal(true);
         
-        // Busca as paradas ordenadas matematicamente pelo motor logístico
         const { data, error } = await supabase
             .from("entregas")
             .select("*")
@@ -75,7 +100,6 @@ export default function TorreDeControlePage() {
         <main className="min-h-screen bg-gray-50 p-6">
             <div className="max-w-7xl mx-auto">
                 
-                {/* Header do Painel */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
                     <div>
                         <h1 className="text-3xl font-black text-gray-900 tracking-tight italic uppercase">LOGIBOT <span className="text-blue-600">TORRE</span></h1>
@@ -91,18 +115,27 @@ export default function TorreDeControlePage() {
                         {[1,2,3].map(i => <div key={i} className="h-64 bg-gray-200 rounded-[2rem]"></div>)}
                     </div>
                 ) : (
-                    /* GRID DE 3 COLUNAS - Layout de Alta Densidade */
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {viagens.map((viagem) => (
                             <div 
                                 key={viagem.id} 
                                 onClick={() => abrirDetalhes(viagem)}
-                                className="bg-white rounded-[2rem] border-2 border-transparent hover:border-blue-500 shadow-sm p-6 cursor-pointer transition-all hover:scale-[1.02] flex flex-col justify-between"
+                                className="bg-white rounded-[2rem] border-2 border-transparent hover:border-blue-500 shadow-sm p-6 cursor-pointer transition-all hover:scale-[1.02] flex flex-col justify-between group relative"
                             >
                                 <div>
                                     <div className="flex justify-between items-center mb-4">
                                         <span className="text-[10px] font-bold text-gray-300 tracking-widest uppercase">ID: {viagem.id.split('-')[0]}</span>
-                                        {getStatusBadge(viagem.status)}
+                                        <div className="flex items-center gap-2">
+                                            {getStatusBadge(viagem.status)}
+                                            {/* BOTÃO DE EXCLUIR NO CARD */}
+                                            <button 
+                                                onClick={(e) => handleExcluirViagem(e, viagem.id)}
+                                                className="p-1.5 text-gray-300 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all"
+                                                title="Excluir Romaneio"
+                                            >
+                                                <Trash2 size={16} />
+                                            </button>
+                                        </div>
                                     </div>
 
                                     <div className="space-y-4 mb-6">
@@ -123,7 +156,6 @@ export default function TorreDeControlePage() {
                                     </div>
                                 </div>
 
-                                {/* MÓDULO FINANCEIRO COMPACTO (KM e CUSTO REAIS) */}
                                 <div className="grid grid-cols-3 gap-2 pt-4 border-t border-gray-50">
                                     <div className="text-center">
                                         <p className="text-[8px] font-black text-gray-400 uppercase mb-1">Distância</p>
@@ -143,7 +175,7 @@ export default function TorreDeControlePage() {
                     </div>
                 )}
 
-                {/* MODAL DE DETALHES DAS ENTREGAS */}
+                {/* MODAL DE DETALHES */}
                 {viagemSelecionada && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
                         <div className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm" onClick={() => setViagemSelecionada(null)}></div>
@@ -157,9 +189,19 @@ export default function TorreDeControlePage() {
                                     </div>
                                     <h2 className="text-2xl font-black text-gray-900 italic">Detalhes do Planejamento</h2>
                                 </div>
-                                <button onClick={() => setViagemSelecionada(null)} className="p-2 hover:bg-gray-200 rounded-full transition-colors">
-                                    <X size={24} className="text-gray-400" />
-                                </button>
+                                <div className="flex items-center gap-2">
+                                    {/* BOTÃO DE EXCLUIR TAMBÉM DENTRO DO MODAL */}
+                                    <button 
+                                        onClick={(e) => handleExcluirViagem(e, viagemSelecionada.id)}
+                                        className="p-2 text-red-600 hover:bg-red-50 rounded-full transition-colors mr-2"
+                                        title="Excluir Romaneio"
+                                    >
+                                        <Trash2 size={24} />
+                                    </button>
+                                    <button onClick={() => setViagemSelecionada(null)} className="p-2 hover:bg-gray-200 rounded-full transition-colors">
+                                        <X size={24} className="text-gray-400" />
+                                    </button>
+                                </div>
                             </div>
 
                             <div className="p-8 max-h-[60vh] overflow-y-auto custom-scrollbar">
