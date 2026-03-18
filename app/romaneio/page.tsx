@@ -193,7 +193,7 @@ export default function RomaneioPage() {
       // 3. 🔌 GATILHO PARA O MOTOR PYTHON (Flask)
       // O sistema tenta avisar o Python para roteirizar agora mesmo
       try {
-        await fetch("http://127.0.0.1:5000/api/roteirizar", { 
+        await fetch("https://motor-logibot.onrender.com/api/roteirizar", { 
           method: "POST", 
           headers: { "Content-Type": "application/json" }, 
           body: JSON.stringify({ viagem_id: novaViagem.id }) 
