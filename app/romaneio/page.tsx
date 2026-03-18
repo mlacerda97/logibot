@@ -85,16 +85,27 @@ export default function RomaneioPage() {
     setIsModalEnderecoOpen(true);
   };
 
+  // DENTRO DA FUNÇÃO salvarEndereco em RomaneioPage.tsx
   const salvarEndereco = async (e: React.FormEvent) => {
     e.preventDefault();
     setSalvandoEndereco(true);
     try {
-      await supabase.from("entregas").update({ endereco_texto: novoEndereco }).eq("id", entregaParaEditar.id);
+      // TROQUE A LINHA DO .update() POR ESTA:
+      const { error } = await supabase.rpc('editar_endereco_entrega', {
+        entrega_id: entregaParaEditar.id,
+        novo_endereco: novoEndereco
+      });
+
+      if (error) throw error;
+
+      // O restante do código de atualizar o estado local continua igual
       setEntregasEncontradas(prev => prev.map(ent => ent.id === entregaParaEditar.id ? { ...ent, endereco_texto: novoEndereco } : ent));
       setTodosPendentes(prev => prev.map(ent => ent.id === entregaParaEditar.id ? { ...ent, endereco_texto: novoEndereco } : ent));
       setIsModalEnderecoOpen(false);
+
+      alert("Endereço atualizado com sucesso no banco! ✅");
     } catch (error) {
-      alert("Erro ao atualizar endereço.");
+      alert("Erro ao salvar endereço no banco.");
     } finally {
       setSalvandoEndereco(false);
     }
