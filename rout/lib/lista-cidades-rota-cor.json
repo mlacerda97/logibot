@@ -1,0 +1,4088 @@
+[
+    {
+        "cidade":  "JAU",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "SANTO EXPEDITO",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "GUAÍRA",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "RIBEIRÃO GRANDE",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "SILVEIRAS",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "VERA CRUZ",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "JOÃO RAMALHO",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "NOVA CASTILHO",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PRESIDENTE EPITÁCIO",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "JABORANDI",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "ANDRADAS",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "BIRIGUI",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "TAQUARIVAÍ",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "PORTO FELIZ",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CASA BRANCA",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "NOVA EUROPA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SEVERÍNIA",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "REGISTRO",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "BIRITIBA MIRIM",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "MATÃO",
+        "uf":  "SP",
+        "rota":  "Cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "BURITIZAL",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "FARTURA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "CORUMBATAÍ",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "APARECIDA DO OESTE",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SANTA MARIA DA SERRA",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CAMPO LIMPO PAULISTA",
+        "uf":  "SP",
+        "rota":  "Jundiai",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "RIO DAS PEDRAS",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PRESIDENTE VENCESLAU",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "IBIRAREMA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SANTA RITA D\u0027OESTE",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PARDINHO",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "ALVINLÂNDIA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SÃO BENTO DO SAPUCAÍ",
+        "uf":  "SP",
+        "rota":  "Campos do Jordão",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "SÃO PAULO",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "TARUMÃ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "INDIANA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "PERUÍBE",
+        "uf":  "SP",
+        "rota":  "Praia Grande",
+        "cor":  "MARROM"
+    },
+    {
+        "cidade":  "TABATINGA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ITAPURA",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PARAIBUNA",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "ARCO-ÍRIS",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "REGENTE FEIJÓ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "NATIVIDADE DA SERRA",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "ÁGUAS DE LINDÓIA",
+        "uf":  "SP",
+        "rota":  "Amparo",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "DIVINOLÂNDIA",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "MONSENHOR PAULO",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "NOVA PONTE",
+        "uf":  "MG",
+        "rota":  "UBERLÂNDIA",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "GUAIÇARA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "BOFETE",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "SANTA CRUZ DAS PALMEIRAS",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "IPUIÚNA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "JANDIRA",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "PANORAMA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "CAPÃO BONITO",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "IPORANGA",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "ITAPEVA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "UBERLÂNDIA",
+        "uf":  "MG",
+        "rota":  "UBERLÂNDIA",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "PINDAMONHANGABA",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "CANANÉIA",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "CAREAÇU",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "AMERICANA",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CAÇAPAVA",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "TUIUTI",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ÓLEO",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "MIRASSOLÂNDIA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "LAVRINHAS",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "URÂNIA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "JUQUIÁ",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "AREALVA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PRATÂNIA",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "MOTUCA",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "REDENÇÃO DA SERRA",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "ELIAS FAUSTO",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "IPUÃ",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SANTO ANDRÉ",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "ITAPORANGA",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "FERNÃO",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ITAPIRA",
+        "uf":  "SP",
+        "rota":  "Mogi-Mirim",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "VOTUPORANGA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "GUAPIARA",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "SANTO ANTÔNIO DO PINHAL",
+        "uf":  "SP",
+        "rota":  "Campos do Jordão",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "BRODOWSKI",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "MAIRINQUE",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "SÃO JOÃO DA BOA VISTA",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "MENDONÇA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "LORENA",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "PARAGUAÇU PAULISTA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "CATANDUVA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ANALÂNDIA",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PIRAPORA DO BOM JESUS",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "São João do Pau d\u0027Alho",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "DOLCINÓPOLIS",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SÃO JOSÉ DOS CAMPOS",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "BERTIOGA",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "TEJUPÁ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "TAPIRAÍ",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "CESÁRIO LANGE",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "LUCÉLIA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "LOURDES",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ÁLVARO DE CARVALHO",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ITAPIRAPUÃ PAULISTA",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "PINDORAMA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "EMILIANÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "PIRAPOZINHO",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "BOA ESPERANÇA DO SUL",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "MACATUBA",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "VARGINHA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "RIBEIRÃO BONITO",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "JAGUARIÚNA",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "GABRIEL MONTEIRO",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ITAQUAQUECETUBA",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "CAFELÂNDIA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "CORONEL MACEDO",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "ITARARÉ",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "SANTO ANASTÁCIO",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SANTA BRANCA",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "TAUBATÉ",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "BARRA DO CHAPÉU",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "MARÍLIA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ALTINÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "PRESIDENTE BERNARDES",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "JALES",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "TURMALINA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ARAPEI",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "GUARAREMA",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "ALUMÍNIO",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CAMPINA DO MONTE ALEGRE",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "CAJAMAR",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "SARAPUÍ",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "DUMONT",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "FERNANDO PRESTES",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "NOVO HORIZONTE",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ENGENHEIRO COELHO",
+        "uf":  "SP",
+        "rota":  "Mogi-Mirim",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ORIENTE",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "PEDREGULHO",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "DOBRADA",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "APIAÍ",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "LINDOIA",
+        "uf":  "SP",
+        "rota":  "Amparo",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PILAR DO SUL",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "POPULINA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "NOVA CANAÃ PAULISTA",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "DESCALVADO",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "RINÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "AVAÍ",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "RIBEIRÃO CORRENTE",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "NIPOÃ",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "INCONFIDENTES",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "CAMPANHA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "POÇO FUNDO",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "MONÇÕES",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "JACI",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "RINCÃO",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "ELDORADO",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "MIRA ESTRELA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "AMÉRICO DE CAMPOS",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "LOUVEIRA",
+        "uf":  "SP",
+        "rota":  "Jundiai",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ITARIRI",
+        "uf":  "SP",
+        "rota":  "Praia Grande",
+        "cor":  "MARROM"
+    },
+    {
+        "cidade":  "RIOLÂNDIA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ITUVERAVA",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "JAMBEIRO",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "PIRAJU",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ITANHAÉM",
+        "uf":  "SP",
+        "rota":  "Praia Grande",
+        "cor":  "MARROM"
+    },
+    {
+        "cidade":  "CAMPINAS",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "MARACAÍ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ITOBI",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ARAGUARI",
+        "uf":  "MG",
+        "rota":  "UBERLÂNDIA",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "MONTE MOR",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "DRACENA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "TORRINHA",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "CRISTAIS PAULISTA",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "BRAGANÇA PAULISTA",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "LARANJAL PAULISTA",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "MIRACATU",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "VOTORANTIM",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "VALENTIM GENTIL",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "IPAUSSU",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "CERQUILHO",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ITÁPOLIS",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PORTO FERREIRA",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "GETULINA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "LAGOINHA",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "IRACEMÁPOLIS",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "GUARATINGUETÁ",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "SANTA RITA DE CALDAS",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "MONJOLOS",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "PAULO DE FARIA",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "PALESTINA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ARTUR NOGUEIRA",
+        "uf":  "SP",
+        "rota":  "Mogi-Mirim",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "BILAC",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "CAIANA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "CATIGUA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PIRACAIA",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "GAVIÃO PEIXOTO",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "IPERÓ",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "TAIUVA",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SÃO ROQUE",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "BARRA DO TURVO",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "CONCHAS",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "OSVALDO CRUZ",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SÃO LOURENÇO DA SERRA",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "BORBOREMA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "BARRETOS",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "PIRAJUÍ",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "MONTEIRO LOBATO",
+        "uf":  "SP",
+        "rota":  "Campos do Jordão",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "OUROESTE",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SANTA LÚCIA",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "EMBU-GUAÇU",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "DUARTINA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "JERIQUARA",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "CEDRAL",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PINHALZINHO",
+        "uf":  "SP",
+        "rota":  "Amparo",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "SERTÃOZINHO",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "ARAMINA",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SUZANO",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "FERNANDÓPOLIS",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "UBERABA",
+        "uf":  "MG",
+        "rota":  "UBERLÂNDIA",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SANTA FÉ DO SUL",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "JACUPIRANGA",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "TAMBAÚ",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "TIETE",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "NARANDIBA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "CAMPOS DO JORDÃO",
+        "uf":  "SP",
+        "rota":  "Campos do Jordão",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "GLICÉRIO",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "BASTOS",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "TAQUARAL",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "PEDERNEIRAS",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "ARIRANHA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ÁLVARES MACHADO",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "GUARANTA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "HERCULÂNDIA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "IBIRÁ",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "QUADRA",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "PEREIRA BARRETO",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "MANDURI",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ANHUMAS",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "UNIÃO PAULISTA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "CRUZÁLIA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "CAJURU",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "QUEIROZ",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SALMOURÃO",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "PIRANGI",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SANTANA DA PONTE PENSA",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SANTO ANTÔNIO DA ALEGRIA",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "MOGI GUAÇU",
+        "uf":  "SP",
+        "rota":  "Mogi-Mirim",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "DOURADO",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "VARGEM",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "BORÁ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "RUBIÁCEA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "COTIA",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "ALTAIR",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "NOVA ALIANÇA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "TARABAI",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SÃO CAETANO DO SUL",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "GUARUJÁ",
+        "uf":  "SP",
+        "rota":  "Praia Grande",
+        "cor":  "MARROM"
+    },
+    {
+        "cidade":  "ASPÁSIA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "UBIRAJARA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ESTIVA GERBI",
+        "uf":  "SP",
+        "rota":  "Mogi-Mirim",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PARIQUERA-AÇU",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "PROMISSÃO",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PRAIA GRANDE",
+        "uf":  "SP",
+        "rota":  "Praia Grande",
+        "cor":  "MARROM"
+    },
+    {
+        "cidade":  "IGUAPE",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "SÃO JOSÉ DO BARREIRO",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "RANCHARIA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "COSMORAMA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "TAQUARITUBA",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "SÃO JOSÉ DA BELA VISTA",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "MONTE ALTO",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "JUMIRIM",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CAJATI",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "RIBEIRÃO DO SUL",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "IRAPURU",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "LUIZIÂNIA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SAGRES",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "CÂNDIDO RODRIGUES",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "RIBEIRÃO PRETO",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "CAIABU",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SANTA ALBERTINA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ADOLFO",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "JUNQUEIRÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "JARDINÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "CAMPESTRE",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "LENÇOIS PAULISTA",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "LEME",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "COSMÓPOLIS",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ALAMBARI",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "VALPARAÍSO",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SERRA AZUL",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "MONTE APRAZÍVEL",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SANDOVALINA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "PIRACICABA",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "MARIÁPOLIS",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ARARAS",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "RIVERSUL",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "MAIRIPORÃ",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "MOCOCA",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CACHOEIRA PAULISTA",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "ITIRAPUÃ",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "MACEDÔNIA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "CARAGUATATUBA",
+        "uf":  "SP",
+        "rota":  "Caraguatatuba",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "ESTRELA DO NORTE",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "FLORÍNEA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ANGATUBA",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "INÚBIA PAULISTA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SUZANÁPOLIS",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "BOM SUCESSO DE ITARARÉ",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "VITÓRIA BRASIL",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "AMPARO",
+        "uf":  "SP",
+        "rota":  "Amparo",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "RIO CLARO",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "JOANÓPOLIS",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "IGARAÇU DO TIETE",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "PEDRINHAS PAULISTA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "MONTE CASTELO",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SANTO ANTÔNIO DO JARDIM",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CRUZEIRO",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "NEVES PAULISTA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SANTA CRUZ DA CONCEIÇÃO",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "TRÊS FRONTEIRAS",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "CACONDE",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "SANTO ANTÔNIO DE POSSE",
+        "uf":  "SP",
+        "rota":  "Mogi-Mirim",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PLATINA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "MACAUBAL",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "IACRI",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "MESÓPOLIS",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SANTOS",
+        "uf":  "SP",
+        "rota":  "Praia Grande",
+        "cor":  "MARROM"
+    },
+    {
+        "cidade":  "BOITUVA",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "SANTÓPOLIS DO AGUAPEÍ",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "DOIS CORREGOS",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "SÃO SEBASTIÃO",
+        "uf":  "SP",
+        "rota":  "Caraguatatuba",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "ITIRAPINA",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PRESIDENTE PRUDENTE",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "CRAVINHOS",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "NANTES",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "LUIZ ANTÔNIO",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SANTA GERTRUDES",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CLEMENTINA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "TIMBURI",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "PEDRANÓPOLIS",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ESPIRITO SANTO DO PINHAL",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ITATINGA",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "PIRATININGA",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "SÃO JOÃO DE IRACEMA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "MONTE SIÃO",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "CANAS",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "BORACEIA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "TAGUAÍ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SALTO",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CAIEIRAS",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "JABOTICABAL",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SANTA ADÉLIA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "GUARARAPES",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SANTA MERCEDES",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "QUATÁ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SABINO",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "BADY BASSITT",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SANTA RITA DO PASSA QUATRO",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "POÇOS DE CALDAS",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "POTIRENDABA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PAULISTÂNIA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SARUTAIÁ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ILHA SOLTEIRA",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "MARABÁ PAULISTA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SETE BARRAS",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "PRESIDENTE ALVES",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SANTA ERNESTINA",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "RIO GRANDE DA SERRA",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "FRANCO DA ROCHA",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "CAMPOS NOVOS PAULISTA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SERRA NEGRA",
+        "uf":  "SP",
+        "rota":  "Amparo",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ÁGUAS DE SÃO PEDRO",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ONDA VERDE",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ÁGUAS DE SANTA BÁRBARA",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "CAPELA DO ALTO",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ARUJÁ",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "BURITAMA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SÃO LUIZ DO PARAITINGA",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "JUQUITIBA",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "SÃO PEDRO DO TURVO",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "FLOREAL",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "AREIAS",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "DIRCE REIS",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "MERIDIANO",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "VARGEM GRANDE PAULISTA",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "SALES OLIVEIRA",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "OSCAR BRESSANE",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ASSIS",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "MORRO AGUDO",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "APARECIDA",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "IBIÚNA",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "SERRANA",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "MACHADO",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "MONGAGUÁ",
+        "uf":  "SP",
+        "rota":  "Praia Grande",
+        "cor":  "MARROM"
+    },
+    {
+        "cidade":  "ARAÇATUBA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "TORRE DE PEDRA",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "SILVIANÓPOLIS",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "SÃO CARLOS",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PONGAÍ",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ATIBAIA",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "COLINA",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "ÁGUAS DA PRATA",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "COLÔMBIA",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "CHAVANTES",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "PORANGABA",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "ANDRADINA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SANTA SALETE",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "FLORA RICA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "PIEDADE",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "PARANAPANEMA",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "RIFAINA",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "BRAÚNA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ITU",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "LUTÉCIA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "IGARAPAVA",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "BREJO ALEGRE",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "CAMANDUCAIA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "GUAREÍ",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "SERRANIA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "BARBOSA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "NOVA GRANADA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "GUARIBA",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "ORINDIÚVA",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "RESTINGA",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "TAIAÇU",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "EUCLIDES DA CUNHA PAULISTA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "REGINÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "TATUÍ",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "SUD MENNUCCI",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "OURO VERDE",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ELOI MENDES",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "TABAPUÃ",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "MAGDA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PENÁPOLIS",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "URU",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "TRABIJU",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "Patrocínio Paulista",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "ITAPUÍ",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "VARGEM GRANDE DO SUL",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "GUARAÇAÍ",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SALTINHO",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ITUPEVA",
+        "uf":  "SP",
+        "rota":  "Jundiai",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CUNHA",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "ICÉM",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "LINS",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "JARINU",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "IBATÉ",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "BÁLSAMO",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "HORTOLÂNDIA",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "CAIUÁ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "NUPORANGA",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "NOVA ODESSA",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ITAPECERICA DA SERRA",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "ALFREDO MARCONDES",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "AURIFLAMA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "Guarani d\u0027Oeste",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "TAQUARITINGA",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "MOMBUCA",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "OLÍMPIA",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "RIBEIRÃO PIRES",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "PEDRO DE TOLEDO",
+        "uf":  "SP",
+        "rota":  "Praia Grande",
+        "cor":  "MARROM"
+    },
+    {
+        "cidade":  "PONTES GESTAL",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "CUBATÃO",
+        "uf":  "SP",
+        "rota":  "Praia Grande",
+        "cor":  "MARROM"
+    },
+    {
+        "cidade":  "AREIÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "ESTIVA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "GUARACI",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SANTA ROSA DE VITERBO",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "BOTELHOS",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "ITABERÁ",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "HOLAMBRA",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "SÃO JOÃO DAS DUAS PONTES",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PONTALINDA",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "BANDEIRA DO SUL",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "EXTREMA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "ROSEIRA",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "SÃO JOÃO DA MATA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "PIRASSUNUNGA",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "AVANHANDAVA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PARANAPUÃ",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "OCAUÇU",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "BATATAIS",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "UBARANA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PIQUEROBI",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "TANABI",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SÃO MANUEL",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "PEREIRAS",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "CÂNDIDO MOTA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "CANITAR",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "TUPI PAULISTA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ITAPETININGA",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "RUBINEIA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PARISI",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SALTO DE PIRAPORA",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "MORUNGABA",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "MOGI MIRIM",
+        "uf":  "SP",
+        "rota":  "Mogi-Mirim",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "IGARATÁ",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "PALMITAL",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "BARRA BONITA",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "EMBU DAS ARTES",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "CAPIVARI",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "CÁSSIA DOS COQUEIROS",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ROSANA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "BOCAINA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ÁLVARES FLORENCE",
+        "uf":  "SP",
+        "rota":  "Cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "MIRANDÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "BERNARDINO DE CAMPOS",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "IBITINGA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "TERRA ROXA",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "ILHABELA",
+        "uf":  "SP",
+        "rota":  "Caraguatatuba",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "IPIGUÁ",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "BOTUCATU",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "MONTE AZUL PAULISTA",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "TURIÚBA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PEDREIRA",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "UBATUBA",
+        "uf":  "SP",
+        "rota":  "Caraguatatuba",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "CAMBUÍ",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "MAUÁ",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "ARARAQUARA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "OURINHOS",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "MONTE ALEGRE DO SUL",
+        "uf":  "SP",
+        "rota":  "Amparo",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PAULICÉIA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "BAURU",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "INDIAPORÃ",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "EMBAÚBA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SÃO VICENTE",
+        "uf":  "SP",
+        "rota":  "Praia Grande",
+        "cor":  "MARROM"
+    },
+    {
+        "cidade":  "TEODORO SAMPAIO",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SANTA ISABEL",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "TAPIRATIBA",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "IPEÚNA",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "BARUERI",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "CONGONHAL",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "CORDEIRÓPOLIS",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "GUARULHOS",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "JÚLIO MESQUITA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ILHA COMPRIDA",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "TACIBA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "IACANGA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SOCORRO",
+        "uf":  "SP",
+        "rota":  "Amparo",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ITATIBA",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "SALESÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "SÃO SIMÃO",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SANTA CRUZ DO RIO PARDO",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ARAÇOIABA DA SERRA",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "SALES",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "GENERAL SALGADO",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "BEBEDOURO",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "NOVA LUZITANIA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PARAÍSO",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PARAPUÃ",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "LUCIANÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "GÁLIA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "BROTAS",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "MINEIROS DO TIETE",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "CASTILHO",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "BENTO DE ABREU",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "CERQUEIRA CÉSAR",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "MARAPOAMA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "IARAS",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "MARTINÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ECHAPORÃ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "NHANDEARA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "DIADEMA",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "SÃO JOSÉ DO RIO PARDO",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ANHEMBI",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "GARÇA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "POTIM",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "FRANCISCO MORATO",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "ORLÂNDIA",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SANTANA DE PARNAÍBA",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "URUPÊS",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "GUATAPARÁ",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "POLONI",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "MIGUELÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SANTO ANTÔNIO DO ARACANGUÁ",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "MARINÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "BARRINHA",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "VIRADOURO",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "BOREBI",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "CARAPICUÍBA",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "PITANGUEIRAS",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "POMPEIA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SÃO PEDRO",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "GUAPIAÇU",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "OSASCO",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "AMÉRICO BRASILIENSE",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ARANDU",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "NOVA GUATAPORANGA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "UCHOA",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PALMARES PAULISTA",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ITAPEVA",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "JACUTINGA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "CABRÁLIA PAULISTA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SÃO MIGUEL ARCANJO",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "ESPIRITO SANTO DO TURVO",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ITAÓCA",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "FRANCA",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "MIRANTE DO PARANAPANEMA",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "ITAPEVI",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "BORDA DA MATA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "BANANAL",
+        "uf":  "SP",
+        "rota":  "#N/D",
+        "cor":  "#N/D"
+    },
+    {
+        "cidade":  "COROADOS",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SANTA BÁRBARA D\u0027OESTE",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ARAÇARIGUAMA",
+        "uf":  "SP",
+        "rota":  "Registro",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "GUAIMBÉ",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "FLÓRIDA PAULISTA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "RIBEIRA",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "BALBINOS",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "LUPÉRCIO",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SÃO FRANCISCO",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "ITAÍ",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "LIMEIRA",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PAULÍNIA",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "TUPÃ",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "NOVA CAMPINA",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "PIQUETE",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "SALTO GRANDE",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "PALMEIRA D\u0027OESTE",
+        "uf":  "SP",
+        "rota":  "Pereira Barreto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "OURO FINO",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "SANTA CLARA D\u0027OESTE",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PRADÓPOLIS",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "AGUDOS",
+        "uf":  "SP",
+        "rota":  "Bauru",
+        "cor":  "BRANCO"
+    },
+    {
+        "cidade":  "NAZARÉ PAULISTA",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "JUNDIAÍ",
+        "uf":  "SP",
+        "rota":  "Jundiai",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "IEPÊ",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "DELTA",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "FERRAZ DE VASCONCELOS",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "ESTRELA D´OESTE",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "TREMEMBÉ",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "SOROCABA",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "GUZOLÂNDIA",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PEDRA BELA",
+        "uf":  "SP",
+        "rota":  "Amparo",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ITAJOBI",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PIACATU",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ELISIÁRIO",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "SEBASTIANÓPOLIS DO SUL",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "TABOÃO DA SERRA",
+        "uf":  "SP",
+        "rota":  "Osasco",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "BOM JESUS DOS PERDÕES",
+        "uf":  "SP",
+        "rota":  "BRAGANÇA PAULISTA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "SÃO BERNARDO DO CAMPO",
+        "uf":  "SP",
+        "rota":  "São Paulo",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "BARIRI",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "BURI",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "RAFARD",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "LAVÍNIA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "SANTA CRUZ DA ESPERANÇA",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "GASTÃO VIDIGAL",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ITAJU",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "GUARÁ",
+        "uf":  "SP",
+        "rota":  "Franca",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "SÃO JOAQUIM DA BARRA",
+        "uf":  "SP",
+        "rota":  "Ribeirão Preto",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "AGUAI",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ALTO ALEGRE",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "MOGI DAS CRUZES",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "MIRASSOL",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "CONCHAL",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PRACINHA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "POÁ",
+        "uf":  "SP",
+        "rota":  "Mogi das Cruzes",
+        "cor":  "ROSA"
+    },
+    {
+        "cidade":  "IRAPUÃ",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "VALINHOS",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PACAEMBU",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "SUMARÉ",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "VISTA ALEGRE DO ALTO",
+        "uf":  "SP",
+        "rota":  "Jaboticabal",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "CARDOSO",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "PARAGUAÇU",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "NOVA INDEPENDÊNCIA",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "AVARÉ",
+        "uf":  "SP",
+        "rota":  "Avaré",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "SÃO SEBASTIÃO DA GRAMA",
+        "uf":  "SP",
+        "rota":  "São João da Boa Vista",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "SÃO JOSÉ DO RIO PRETO",
+        "uf":  "SP",
+        "rota":  "São José do Rio Preto",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "VINHEDO",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "QUINTANA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "QUELUZ",
+        "uf":  "SP",
+        "rota":  "Guaratingueta",
+        "cor":  "LARANJA"
+    },
+    {
+        "cidade":  "BARÃO DE ANTONINA",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "CHARQUEADA",
+        "uf":  "SP",
+        "rota":  "LIMEIRA",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "ADAMANTINA",
+        "uf":  "SP",
+        "rota":  "Dracena",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "NOVAIS",
+        "uf":  "SP",
+        "rota":  "cardoso",
+        "cor":  "VERMELHO"
+    },
+    {
+        "cidade":  "RIBEIRÃO BRANCO",
+        "uf":  "SP",
+        "rota":  "Capão Bonito",
+        "cor":  "AZUL"
+    },
+    {
+        "cidade":  "MURUTINGA DO SUL",
+        "uf":  "SP",
+        "rota":  "Araçatuba",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "PONTAL",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "POUSO ALEGRE",
+        "uf":  "MG",
+        "rota":  "MG",
+        "cor":  "DOURADO"
+    },
+    {
+        "cidade":  "RIBEIRÃO DOS ÍNDIOS",
+        "uf":  "SP",
+        "rota":  "Presidenre Prudente",
+        "cor":  "CINZA"
+    },
+    {
+        "cidade":  "CABREÚVA",
+        "uf":  "SP",
+        "rota":  "Sorocaba",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "PLANALTO",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "ZACARIAS",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "JOSÉ BONIFÁCIO",
+        "uf":  "SP",
+        "rota":  "Buritama",
+        "cor":  "PRETO"
+    },
+    {
+        "cidade":  "CAJOBI",
+        "uf":  "SP",
+        "rota":  "Barretos",
+        "cor":  "AMARELO"
+    },
+    {
+        "cidade":  "VÁRZEA PAULISTA",
+        "uf":  "SP",
+        "rota":  "Jundiai",
+        "cor":  "VERDE"
+    },
+    {
+        "cidade":  "INDAIATUBA",
+        "uf":  "SP",
+        "rota":  "CAMPINAS",
+        "cor":  "VERDE"
+    }
+]

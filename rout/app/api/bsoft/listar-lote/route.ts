@@ -1,86 +1,100 @@
-import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase'; // <-- NOVO: Importando nosso banco!
+import { NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
 
-const BSOFT_API_URL = 'https://api.bsoft.com.br/sistema/v2';
+const BSOFT_API_URL = "https://api.bsoft.com.br/sistema/v2";
+export const runtime = "nodejs";
+
+type BsoftCte = {
+  id: string | number;
+  numero: string | number;
+  token_valido: string;
+};
 
 export async function POST(req: Request) {
   try {
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!
+    );
+
     const { data_inicial, data_final, numero_cte } = await req.json();
+    const empresas = [1, 2];
+    const todosCtesBsoft: BsoftCte[] = [];
 
-    const loginPayload = {
-      tag: process.env.BSOFT_TAG,
-      id_bsoft: process.env.BSOFT_TAG, 
-      usuario_sistema: process.env.BSOFT_USUARIO,
-      senha_sistema: process.env.BSOFT_SENHA,
-      empresa: Number(process.env.BSOFT_EMPRESA) || 1
-    };
+    for (const idEmpresa of empresas) {
+      try {
+        const loginPayload = {
+          tag: process.env.BSOFT_TAG,
+          id_bsoft: process.env.BSOFT_TAG,
+          usuario_sistema: process.env.BSOFT_USUARIO,
+          senha_sistema: process.env.BSOFT_SENHA,
+          empresa: idEmpresa
+        };
 
-    const loginReq = await fetch(`${BSOFT_API_URL}/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(loginPayload)
-    });
+        const loginReq = await fetch(`${BSOFT_API_URL}/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(loginPayload),
+          signal: AbortSignal.timeout(15000)
+        });
 
-    if (!loginReq.ok) throw new Error("Falha na autenticação com a Bsoft.");
-    const loginData = await loginReq.json();
-    const token = loginData.token || loginData.access_token;
+        if (!loginReq.ok) continue;
 
-    let urlBusca = `${BSOFT_API_URL}/cte?data_inicial=${data_inicial}&data_final=${data_final}`;
-    if (numero_cte) urlBusca += `&numero=${numero_cte}`;
+        const loginData = await loginReq.json();
+        const token = loginData.token || loginData.access_token;
+        if (!token) continue;
 
-    const cteReq = await fetch(urlBusca, {
-      method: 'GET',
-      headers: { 'Authorization': `Bearer ${token}` }
-    });
+        let urlBusca = `${BSOFT_API_URL}/cte?data_inicial=${data_inicial}&data_final=${data_final}`;
+        if (numero_cte) urlBusca += `&numero=${numero_cte}`;
 
-    if (!cteReq.ok) throw new Error("Erro ao listar CT-es da Bsoft.");
-    const ctes = await cteReq.json();
+        const cteReq = await fetch(urlBusca, {
+          method: "GET",
+          headers: { Authorization: `Bearer ${token}` },
+          signal: AbortSignal.timeout(30000)
+        });
 
-    let ctesFiltrados = ctes;
-    if (numero_cte) {
-        ctesFiltrados = ctes.filter((c: any) => String(c.numero) === String(numero_cte));
+        if (!cteReq.ok) continue;
+
+        const ctes = (await cteReq.json()) as Array<{ id: string | number; numero: string | number }>;
+        todosCtesBsoft.push(
+          ...ctes.map((c) => ({
+            id: c.id,
+            numero: c.numero,
+            token_valido: token
+          }))
+        );
+      } catch (erroEmpresa) {
+        console.warn(`Falha ao consultar empresa ${idEmpresa}`, erroEmpresa);
+      }
     }
 
-    // ==========================================
-    // NOVO: INTELIGÊNCIA DE CRUZAMENTO DE DADOS
-    // ==========================================
-    
-    // 1. Pega só os números dos CT-es encontrados na Bsoft
-    const numerosBsoft = ctesFiltrados.map((c: any) => String(c.numero));
-    
-    let numerosExistentes = new Set();
+    const ctesFiltrados = numero_cte
+      ? todosCtesBsoft.filter((c) => String(c.numero) === String(numero_cte))
+      : todosCtesBsoft;
 
-    // 2. Vai no Supabase e pergunta: "Quais desses números você já tem salvos?"
+    const numerosBsoft = ctesFiltrados.map((c) => String(c.numero));
+    const numerosExistentes = new Set<string>();
+
     if (numerosBsoft.length > 0) {
-        const { data: ctesNoBanco } = await supabase
-            .from('entregas')
-            .select('cte_origem')
-            .in('cte_origem', numerosBsoft); // Busca otimizada em lote no banco
-            
-        if (ctesNoBanco) {
-            ctesNoBanco.forEach(c => numerosExistentes.add(c.cte_origem));
-        }
+      const { data: ctesNoBanco } = await supabase
+        .from("entregas")
+        .select("cte_origem")
+        .in("cte_origem", numerosBsoft);
+
+      (ctesNoBanco || []).forEach((c: { cte_origem: string }) => numerosExistentes.add(String(c.cte_origem)));
     }
 
-    // 3. Filtra a lista final deixando SÓ o que é novo (inédito)
-    const ctesIneditos = ctesFiltrados.filter((c: any) => !numerosExistentes.has(String(c.numero)));
-
-    const ctesMapeados = ctesIneditos.map((c: any) => ({
+    const ctesIneditos = ctesFiltrados.filter((c) => !numerosExistentes.has(String(c.numero)));
+    const ctesMapeados = ctesIneditos.map((c) => ({
       id: c.id,
-      numero: String(c.numero)
+      numero: String(c.numero),
+      token: c.token_valido
     }));
-    
-    // Mandamos uma flag extra para o Front-end saber se o CT-e foi barrado por já existir
-    const jaImportado = numero_cte && ctesFiltrados.length > 0 && ctesIneditos.length === 0;
 
-    return NextResponse.json({ 
-        ctes: ctesMapeados, 
-        token,
-        ja_importado: jaImportado
-    }, { status: 200 });
-
-  } catch (error: any) {
-    console.error(error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    const jaImportado = Boolean(numero_cte && ctesFiltrados.length > 0 && ctesIneditos.length === 0);
+    return NextResponse.json({ ctes: ctesMapeados, ja_importado: jaImportado }, { status: 200 });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : "Erro interno";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

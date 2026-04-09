@@ -1,0 +1,8 @@
+Flask
+flask-cors
+supabase
+requests
+ortools
+python-dotenv
+gunicorn
+googlemaps

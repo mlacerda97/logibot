@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/components/Sidebar"; // NOSSO MENU NOVO
+import Sidebar from "@/components/Sidebar";
+import ThemeProvider from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,13 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${inter.className} bg-gray-50 text-gray-900 flex min-h-screen`}>
-        <Sidebar />
-        {/* O conteúdo das páginas fica empurrado para a direita (ml-64) por causa do menu */}
-        <div className="flex-1 ml-64 min-h-screen">
-          {children}
-        </div>
+        <ThemeProvider>
+          <Sidebar />
+          {/* O conteúdo das páginas fica empurrado para a direita (ml-64) por causa do menu */}
+          <div className="flex-1 ml-64 min-h-screen">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
