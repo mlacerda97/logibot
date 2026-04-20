@@ -1,1 +1,399 @@
 @import "tailwindcss";
+
+/* Ativa dark mode por classe no Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ================================================
+   VARIÁVEIS CSS: MODO CLARO (padrão)
+   ================================================ */
+:root {
+  /* Backgrounds */
+  --bg-page: #f9fafb;        /* gray-50 */
+  --bg-card: #ffffff;         /* white */
+  --bg-card-hover: #f9fafb;  /* gray-50 */
+  --bg-sidebar: #ffffff;     
+  --bg-input: #f9fafb;       /* gray-50 */
+  --bg-modal: #ffffff;
+  --bg-overlay: rgba(17, 24, 39, 0.4);
+
+  /* Borders */
+  --border-primary: #f3f4f6; /* gray-100 */
+  --border-secondary: #e5e7eb; /* gray-200 */
+  --border-input: #e5e7eb;
+
+  /* Text */
+  --text-primary: #111827;   /* gray-900 */
+  --text-secondary: #6b7280; /* gray-500 */
+  --text-tertiary: #9ca3af;  /* gray-400 */
+  --text-muted: #d1d5db;     /* gray-300 */
+
+  /* Misc */
+  --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-modal: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/* ================================================
+   VARIÁVEIS CSS: MODO ESCURO
+   ================================================ */
+.dark {
+  /* Backgrounds */
+  --bg-page: #0f1117;
+  --bg-card: #1a1d27;
+  --bg-card-hover: #22252f;
+  --bg-sidebar: #13151d;
+  --bg-input: #22252f;
+  --bg-modal: #1a1d27;
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+
+  /* Borders */
+  --border-primary: #2a2d3a;
+  --border-secondary: #343848;
+  --border-input: #343848;
+
+  /* Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+  --text-muted: #475569;
+
+  /* Misc */
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+  --shadow-modal: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+}
+
+/* ================================================
+   TRANSIÇÃO SUAVE entre temas
+   ================================================ */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ================================================
+   OVERRIDE GLOBAL: Aplica dark mode automaticamente
+   em todos os elementos comuns
+   ================================================ */
+
+/* Backgrounds das páginas */
+.dark main {
+  background-color: var(--bg-page) !important;
+}
+
+/* Cards e containers brancos */
+.dark .bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: var(--bg-page) !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: var(--bg-card-hover) !important;
+}
+
+/* Borders */
+.dark .border-gray-100 {
+  border-color: var(--border-primary) !important;
+}
+
+.dark .border-gray-200 {
+  border-color: var(--border-secondary) !important;
+}
+
+.dark .border-gray-300 {
+  border-color: var(--border-secondary) !important;
+}
+
+/* Text colors */
+.dark .text-gray-900 {
+  color: var(--text-primary) !important;
+}
+
+.dark .text-gray-800 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-gray-700 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-gray-600 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-gray-500 {
+  color: var(--text-secondary) !important;
+}
+
+.dark .text-gray-400 {
+  color: var(--text-tertiary) !important;
+}
+
+.dark .text-gray-300 {
+  color: var(--text-muted) !important;
+}
+
+.dark .text-black {
+  color: var(--text-primary) !important;
+}
+
+/* Input fields */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: var(--bg-input) !important;
+  border-color: var(--border-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: var(--text-tertiary) !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #3b82f6 !important;
+}
+
+/* Sidebar overrides */
+.dark .bg-white.border-r {
+  background-color: var(--bg-sidebar) !important;
+  border-color: var(--border-primary) !important;
+}
+
+/* Hover states */
+.dark .hover\:bg-gray-50:hover {
+  background-color: var(--bg-card-hover) !important;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: #2a2d3a !important;
+}
+
+.dark .hover\:bg-gray-200:hover {
+  background-color: #343848 !important;
+}
+
+.dark .hover\:text-gray-900:hover {
+  color: var(--text-primary) !important;
+}
+
+/* Blue accent states in dark (keep vibrant) */
+.dark .bg-blue-50 {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+.dark .bg-blue-100 {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Green accent */
+.dark .bg-green-50 {
+  background-color: rgba(34, 197, 94, 0.1) !important;
+}
+
+/* Yellow accent */
+.dark .bg-yellow-50 {
+  background-color: rgba(234, 179, 8, 0.1) !important;
+}
+
+/* Red accent */
+.dark .bg-red-50 {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Orange accent */
+.dark .bg-orange-50\/50 {
+  background-color: rgba(249, 115, 22, 0.08) !important;
+}
+
+.dark .bg-blue-50\/50 {
+  background-color: rgba(59, 130, 246, 0.08) !important;
+}
+
+/* Modal overlay */
+.dark .bg-gray-900\/40 {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.dark .bg-gray-900\/60 {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Misc backgrounds in modals */
+.dark .bg-yellow-50\/50 {
+  background-color: rgba(234, 179, 8, 0.08) !important;
+}
+
+.dark .bg-green-50\/50 {
+  background-color: rgba(34, 197, 94, 0.08) !important;
+}
+
+.dark .bg-gray-50\/50 {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Gray tabs & button in dark */
+.dark .bg-gray-200\/50 {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Table */
+.dark table {
+  color: var(--text-primary);
+}
+
+.dark thead tr {
+  background-color: var(--bg-card-hover) !important;
+  border-color: var(--border-primary) !important;
+}
+
+.dark tbody tr {
+  border-color: var(--border-primary) !important;
+}
+
+.dark tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Shadow override */
+.dark .shadow-sm,
+.dark .shadow,
+.dark .shadow-md,
+.dark .shadow-lg,
+.dark .shadow-xl,
+.dark .shadow-2xl {
+  box-shadow: var(--shadow-card) !important;
+}
+
+/* Scrollbar styling for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--border-secondary);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Custom scrollbar (existing class) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 2px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-secondary);
+}
+
+/* Keep button colors intact in dark */
+.dark .bg-gray-900 {
+  background-color: #f1f5f9 !important;
+  color: #0f1117 !important;
+}
+
+.dark .bg-gray-900:hover,
+.dark .hover\:bg-black:hover {
+  background-color: #ffffff !important;
+  color: #0f1117 !important;
+}
+
+/* Exception: The dark hero card in torre page must stay dark */
+.dark .bg-gradient-to-br.from-gray-900 {
+  background-image: linear-gradient(to bottom right, #1e293b, #334155) !important;
+  color: white !important;
+}
+
+.dark .bg-gradient-to-br.from-gray-900 * {
+  color: inherit !important;
+}
+
+/* Exception: The bottom bar on romaneio (already dark) should stay */
+.dark .bg-gray-900\/95 {
+  background-color: rgba(30, 41, 59, 0.95) !important;
+  color: white !important;
+}
+
+.dark .bg-gray-900\/95 * {
+  color: inherit !important;
+}
+
+.dark .bg-gray-900\/95 .text-gray-400 {
+  color: #94a3b8 !important;
+}
+
+/* Fix: select dropdown options */
+.dark option {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Fix: status/category badges should keep their original colors */
+.dark .text-blue-700,
+.dark .text-blue-600,
+.dark .text-blue-800 {
+  color: inherit !important;
+}
+
+.dark .text-green-700,
+.dark .text-green-600 {
+  color: inherit !important;
+}
+
+.dark .text-yellow-700,
+.dark .text-yellow-600,
+.dark .text-yellow-800 {
+  color: inherit !important;
+}
+
+.dark .text-red-700,
+.dark .text-red-600,
+.dark .text-red-500 {
+  color: inherit !important;
+}
+
+/* Sidebar: Active item stays blue in dark */
+.dark .bg-blue-50.text-blue-700 {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  color: #60a5fa !important;
+}
+
+/* Fix: Disabled button stays dimmed */
+.dark .disabled\:opacity-50:disabled {
+  opacity: 0.5 !important;
+}
+
+.dark .disabled\:bg-gray-400:disabled {
+  background-color: #475569 !important;
+  color: #94a3b8 !important;
+}
+
+.dark .disabled\:bg-gray-800:disabled {
+  background-color: #334155 !important;
+  color: #64748b !important;
+}
