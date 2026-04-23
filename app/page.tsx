@@ -152,7 +152,7 @@ export default function Home() {
 
       const { data, error } = await supabase
           .from("viagens")
-          .select(`*, motoristas(nome), veiculos(placa)`)
+          .select(`*, motoristas(nome), veiculos(*)`)
           .gte("data_saida", inicioDia)
           .lte("data_saida", fimDia)
           .order("created_at", { ascending: false });
@@ -176,6 +176,13 @@ export default function Home() {
           default: return <span className={`${base} bg-gray-50 text-gray-700 border-gray-200`}>{status}</span>;
       }
   };
+
+  const isViagemTerceiro = (viagem: any) => String(viagem?.veiculos?.tipo_frota || "proprio").toLowerCase() === "terceiro";
+  const valorKmTerceiro = (viagem: any) => Number(viagem?.veiculos?.valor_km_terceiro || 0);
+  const kmEstimado = (viagem: any) => Number(viagem?.km_total_estimado || 0);
+  const custoCombustivel = (viagem: any) => Number(viagem?.custo_diesel_estimado || 0);
+  const custoPrincipal = (viagem: any) => isViagemTerceiro(viagem) ? kmEstimado(viagem) * valorKmTerceiro(viagem) : custoCombustivel(viagem);
+  const labelCustoPrincipal = (viagem: any) => isViagemTerceiro(viagem) ? "Valor Viagem" : "Custo Est.";
 
   return (
     <main className="p-8 max-w-6xl mx-auto">
@@ -403,8 +410,8 @@ export default function Home() {
                                               <p className="text-xs font-bold text-gray-500 flex items-center gap-2"><Truck size={14} className="text-gray-400"/> {viagem.veiculos?.placa || "Sem placa"}</p>
                                           </div>
                                           <div className="text-right">
-                                              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Custo Est.</p>
-                                              <p className="text-sm font-black text-red-500">R$ {viagem.custo_diesel_estimado?.toFixed(0) || 0}</p>
+                                              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{labelCustoPrincipal(viagem)}</p>
+                                              <p className="text-sm font-black text-red-500">R$ {custoPrincipal(viagem).toLocaleString("pt-BR", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
                                           </div>
                                       </div>
                                   </div>

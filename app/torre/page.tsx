@@ -68,7 +68,7 @@ export default function TorreDeControlePage() {
       .select(`
         *,
         motoristas ( nome, telefone ),
-        veiculos ( placa, modelo, consumo_medio ),
+        veiculos ( * ),
         km_total_estimado,
         custo_diesel_estimado
       `)
@@ -94,7 +94,7 @@ export default function TorreDeControlePage() {
       .select(`
         *,
         motoristas ( nome, telefone ),
-        veiculos ( placa, modelo, consumo_medio ),
+        veiculos ( * ),
         km_total_estimado,
         custo_diesel_estimado
       `)
@@ -289,6 +289,17 @@ export default function TorreDeControlePage() {
 
   const imprimirManifesto = () => {
     if (!viagemSelecionada) return;
+    const ehTerceiro = isViagemTerceiro(viagemSelecionada);
+    const kmViagem = kmEstimado(viagemSelecionada);
+    const custoComb = custoCombustivel(viagemSelecionada);
+    const valorKmTer = valorKmTerceiro(viagemSelecionada);
+    const valorViagemTer = custoTerceiro(viagemSelecionada);
+    const linhaTerceiro = ehTerceiro
+      ? `
+            <div><strong>Valor por KM (Terceiro):</strong> R$ ${valorKmTer.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</div>
+            <div><strong>Valor da Viagem (Terceiro):</strong> R$ ${valorViagemTer.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</div>`
+      : "";
+
     const linhas = entregasSequencia
       .map(
         (entrega) => `
@@ -322,8 +333,9 @@ export default function TorreDeControlePage() {
             <div><strong>Motorista:</strong> ${viagemSelecionada.motoristas?.nome || "-"}</div>
             <div><strong>Veiculo:</strong> ${viagemSelecionada.veiculos?.placa || "-"}</div>
             <div><strong>Data de Saida:</strong> ${new Date(viagemSelecionada.data_saida).toLocaleDateString("pt-BR")}</div>
-            <div><strong>KM Estimado:</strong> ${viagemSelecionada.km_total_estimado || 0} km</div>
-            <div><strong>Custo Estimado:</strong> R$ ${(viagemSelecionada.custo_diesel_estimado || 0).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</div>
+            <div><strong>KM Estimado:</strong> ${kmViagem.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} km</div>
+            <div><strong>Custo Combustivel:</strong> R$ ${custoComb.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</div>
+            ${linhaTerceiro}
           </div>
           <table>
             <thead>
@@ -366,6 +378,16 @@ export default function TorreDeControlePage() {
         ordem_visual: index + 1
       }));
   }, [entregasDoModal]);
+
+  const tipoFrotaVeiculo = (viagem: any) => String(viagem?.veiculos?.tipo_frota || "proprio").toLowerCase();
+  const isViagemTerceiro = (viagem: any) => tipoFrotaVeiculo(viagem) === "terceiro";
+  const valorKmTerceiro = (viagem: any) => Number(viagem?.veiculos?.valor_km_terceiro || 0);
+  const kmEstimado = (viagem: any) => Number(viagem?.km_total_estimado || 0);
+  const custoCombustivel = (viagem: any) => Number(viagem?.custo_diesel_estimado || 0);
+  const custoTerceiro = (viagem: any) => kmEstimado(viagem) * valorKmTerceiro(viagem);
+  const custoPrincipal = (viagem: any) => isViagemTerceiro(viagem) ? custoTerceiro(viagem) : custoCombustivel(viagem);
+  const labelCustoPrincipal = (viagem: any) => isViagemTerceiro(viagem) ? "Valor Viagem" : "Custo Est.";
+  const consumoExibicao = (viagem: any) => Number(viagem?.veiculos?.consumo_medio || 2.5);
 
   const getStatusBadge = (status: string) => {
     const base = "text-[10px] font-black px-2 py-0.5 rounded-full border uppercase tracking-tighter";
@@ -449,12 +471,12 @@ export default function TorreDeControlePage() {
                     <p className="text-xs font-black text-blue-600">{viagem.km_total_estimado || 0} km</p>
                   </div>
                   <div className="text-center border-x border-gray-100">
-                    <p className="text-[8px] font-black text-gray-400 uppercase mb-1">Custo Est.</p>
-                    <p className="text-xs font-black text-red-500">R$ {viagem.custo_diesel_estimado?.toFixed(0) || 0}</p>
+                    <p className="text-[8px] font-black text-gray-400 uppercase mb-1">{labelCustoPrincipal(viagem)}</p>
+                    <p className="text-xs font-black text-red-500">R$ {custoPrincipal(viagem).toLocaleString("pt-BR", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
                   </div>
                   <div className="text-center">
                     <p className="text-[8px] font-black text-gray-400 uppercase mb-1">Consumo</p>
-                    <p className="text-xs font-black text-green-600">{viagem.veiculos?.consumo_medio || 2.5}</p>
+                    <p className="text-xs font-black text-green-600">{consumoExibicao(viagem)}</p>
                   </div>
                 </div>
               </div>
@@ -550,13 +572,30 @@ export default function TorreDeControlePage() {
                     <p className="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-1">Rentabilidade Estimada</p>
                     <div className="flex justify-between items-end mt-2">
                       <div>
-                        <p className="text-[10px] opacity-60 font-bold uppercase">Custo Combustivel</p>
-                        <p className="text-2xl font-black">R$ {viagemSelecionada.custo_diesel_estimado?.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</p>
+                        <p className="text-[10px] opacity-60 font-bold uppercase">{isViagemTerceiro(viagemSelecionada) ? "Valor Viagem (Terceiro)" : "Custo Combustivel"}</p>
+                        <p className="text-2xl font-black">R$ {custoPrincipal(viagemSelecionada).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</p>
                       </div>
                       <Fuel size={28} className="text-blue-500 mb-1" />
                     </div>
                   </div>
                 </div>
+
+                {isViagemTerceiro(viagemSelecionada) && (
+                  <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <div className="bg-white border border-gray-200 rounded-2xl p-4">
+                      <p className="text-[10px] font-black uppercase text-gray-400">KM Estimado</p>
+                      <p className="text-lg font-black text-blue-600">{kmEstimado(viagemSelecionada).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} km</p>
+                    </div>
+                    <div className="bg-white border border-gray-200 rounded-2xl p-4">
+                      <p className="text-[10px] font-black uppercase text-gray-400">Combustivel</p>
+                      <p className="text-lg font-black text-orange-600">R$ {custoCombustivel(viagemSelecionada).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</p>
+                    </div>
+                    <div className="bg-white border border-gray-200 rounded-2xl p-4">
+                      <p className="text-[10px] font-black uppercase text-gray-400">Valor Viagem</p>
+                      <p className="text-lg font-black text-green-600">R$ {custoTerceiro(viagemSelecionada).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</p>
+                    </div>
+                  </div>
+                )}
 
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
                   <RouteMap entregas={entregasSequencia} />
