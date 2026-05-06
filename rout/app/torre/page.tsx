@@ -384,7 +384,7 @@ export default function TorreDeControlePage() {
   const valorKmTerceiro = (viagem: any) => Number(viagem?.veiculos?.valor_km_terceiro || 0);
   const kmEstimado = (viagem: any) => Number(viagem?.km_total_estimado || 0);
   const custoCombustivel = (viagem: any) => Number(viagem?.custo_diesel_estimado || 0);
-  const custoTerceiro = (viagem: any) => kmEstimado(viagem) * valorKmTerceiro(viagem);
+  const custoTerceiro = (viagem: any) => Math.round(kmEstimado(viagem) * valorKmTerceiro(viagem) * 100) / 100;
   const custoPrincipal = (viagem: any) => isViagemTerceiro(viagem) ? custoTerceiro(viagem) : custoCombustivel(viagem);
   const labelCustoPrincipal = (viagem: any) => isViagemTerceiro(viagem) ? "Valor Viagem" : "Custo Est.";
   const consumoExibicao = (viagem: any) => Number(viagem?.veiculos?.consumo_medio || 2.5);
@@ -499,6 +499,14 @@ export default function TorreDeControlePage() {
                   <h2 className="text-2xl font-black text-gray-900 italic">Detalhes do Planejamento</h2>
                 </div>
                 <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => dispararRecalculoRota(viagemSelecionada.id, "Rota recalculada.")}
+                    disabled={recalculando}
+                    className="p-2 text-blue-600 hover:bg-blue-50 rounded-full transition-colors disabled:opacity-40"
+                    title="Recalcular rota (atualiza KM e custo)"
+                  >
+                    <RotateCcw size={20} />
+                  </button>
                   <button onClick={imprimirManifesto} className="p-2 text-gray-600 hover:bg-gray-200 rounded-full transition-colors" title="Imprimir manifesto">
                     <Printer size={20} />
                   </button>
