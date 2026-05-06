@@ -17,7 +17,13 @@ export async function POST(req: Request) {
       process.env.SUPABASE_SERVICE_ROLE_KEY!
     );
 
-    const { data_inicial, data_final, numero_cte } = await req.json();
+    const { data_inicial, data_final, numero_cte, numeros_cte } = await req.json();
+
+    // Normaliza para array de números
+    const numerosArray: string[] = numeros_cte
+      ? (Array.isArray(numeros_cte) ? numeros_cte : [numeros_cte]).map(String).filter(Boolean)
+      : numero_cte ? [String(numero_cte)] : [];
+
     const empresas = [1, 2];
     const todosCtesBsoft: BsoftCte[] = [];
 
@@ -45,7 +51,8 @@ export async function POST(req: Request) {
         if (!token) continue;
 
         let urlBusca = `${BSOFT_API_URL}/cte?data_inicial=${data_inicial}&data_final=${data_final}`;
-        if (numero_cte) urlBusca += `&numero=${numero_cte}`;
+        // Para busca de número único, filtra direto na API; para múltiplos, traz tudo e filtra local
+        if (numerosArray.length === 1) urlBusca += `&numero=${numerosArray[0]}`;
 
         const cteReq = await fetch(urlBusca, {
           method: "GET",
@@ -68,8 +75,8 @@ export async function POST(req: Request) {
       }
     }
 
-    const ctesFiltrados = numero_cte
-      ? todosCtesBsoft.filter((c) => String(c.numero) === String(numero_cte))
+    const ctesFiltrados = numerosArray.length > 0
+      ? todosCtesBsoft.filter((c) => numerosArray.includes(String(c.numero)))
       : todosCtesBsoft;
 
     const numerosBsoft = ctesFiltrados.map((c) => String(c.numero));
@@ -91,7 +98,7 @@ export async function POST(req: Request) {
       token: c.token_valido
     }));
 
-    const jaImportado = Boolean(numero_cte && ctesFiltrados.length > 0 && ctesIneditos.length === 0);
+    const jaImportado = Boolean(numerosArray.length === 1 && ctesFiltrados.length > 0 && ctesIneditos.length === 0);
     return NextResponse.json({ ctes: ctesMapeados, ja_importado: jaImportado }, { status: 200 });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Erro interno";

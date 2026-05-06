@@ -77,13 +77,22 @@ export default function Home() {
     }
 
     try {
+      const numerosArray = numeroCte
+        .split(",")
+        .map((s: string) => s.trim())
+        .filter(Boolean);
+
       const res = await fetch("/api/bsoft/listar-lote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
-          data_inicial: formatarParaBsoft(strDataInicial), 
+        body: JSON.stringify({
+          data_inicial: formatarParaBsoft(strDataInicial),
           data_final: formatarParaBsoft(strDataFinal),
-          numero_cte: numeroCte 
+          ...(numerosArray.length > 1
+            ? { numeros_cte: numerosArray }
+            : numerosArray.length === 1
+            ? { numero_cte: numerosArray[0] }
+            : {})
         }),
       });
 
@@ -111,19 +120,23 @@ export default function Home() {
     if (ctesList.length === 0) return;
     setImportando(true);
 
-    for (let i = 0; i < ctesList.length; i++) {
-      const cte = ctesList[i];
-      try {
-        await fetch("/api/bsoft/importar-xml", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          // AQUI ESTÁ A CORREÇÃO: O token agora vem do próprio objeto CTE!
-          body: JSON.stringify({ id_bsoft: cte.id, numero_cte: cte.numero, token: cte.token }),
-        });
-      } catch (error) {
-        console.error(`Falha no CTE ${cte.numero}`);
-      }
-      setProgresso(Math.round(((i + 1) / ctesList.length) * 100));
+    const BATCH_SIZE = 5;
+    for (let i = 0; i < ctesList.length; i += BATCH_SIZE) {
+      const batch = ctesList.slice(i, i + BATCH_SIZE);
+      await Promise.all(
+        batch.map(async (cte) => {
+          try {
+            await fetch("/api/bsoft/importar-xml", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ id_bsoft: cte.id, numero_cte: cte.numero, token: cte.token }),
+            });
+          } catch (error) {
+            console.error(`Falha no CTE ${cte.numero}`);
+          }
+        })
+      );
+      setProgresso(Math.round((Math.min(i + BATCH_SIZE, ctesList.length) / ctesList.length) * 100));
     }
     setImportando(false);
   };
@@ -260,8 +273,8 @@ export default function Home() {
             </div>
             
             <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Número do CT-e (Busca Específica)</label>
-                <input type="text" value={numeroCte} onChange={(e) => setNumeroCte(e.target.value)} placeholder="Ex: 12345 (Deixe em branco para buscar lote completo)" className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all" />
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Número do CT-e (um ou vários separados por vírgula)</label>
+                <input type="text" value={numeroCte} onChange={(e) => setNumeroCte(e.target.value)} placeholder="Ex: 12345 ou 12345, 67890, 11111 (em branco = lote por data)" className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all" />
             </div>
 
             <button type="submit" disabled={loadingBusca || importando} className="bg-gray-900 hover:bg-black text-white font-semibold py-3 px-6 rounded-xl transition-colors disabled:opacity-50 w-full sm:w-auto mt-2">
