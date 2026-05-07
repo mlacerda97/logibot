@@ -289,16 +289,7 @@ export default function TorreDeControlePage() {
 
   const imprimirManifesto = () => {
     if (!viagemSelecionada) return;
-    const ehTerceiro = isViagemTerceiro(viagemSelecionada);
     const kmViagem = kmEstimado(viagemSelecionada);
-    const custoComb = custoCombustivel(viagemSelecionada);
-    const valorKmTer = valorKmTerceiro(viagemSelecionada);
-    const valorViagemTer = custoTerceiro(viagemSelecionada);
-    const linhaTerceiro = ehTerceiro
-      ? `
-            <div><strong>Valor por KM (Terceiro):</strong> R$ ${valorKmTer.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
-            <div><strong>Valor da Viagem (Terceiro):</strong> R$ ${valorViagemTer.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>`
-      : "";
 
     const linhas = entregasSequencia
       .map(
@@ -334,8 +325,6 @@ export default function TorreDeControlePage() {
             <div><strong>Veiculo:</strong> ${viagemSelecionada.veiculos?.placa || "-"}</div>
             <div><strong>Data de Saida:</strong> ${new Date(viagemSelecionada.data_saida).toLocaleDateString("pt-BR")}</div>
             <div><strong>KM Estimado:</strong> ${kmViagem.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} km</div>
-            <div><strong>Custo Combustivel:</strong> R$ ${custoComb.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
-            ${linhaTerceiro}
           </div>
           <table>
             <thead>
