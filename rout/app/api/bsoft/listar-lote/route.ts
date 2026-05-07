@@ -18,6 +18,12 @@ export async function POST(req: Request) {
     );
 
     const { data_inicial, data_final, numero_cte } = await req.json();
+
+    // Suporte a múltiplos CT-es separados por vírgula
+    const numerosFiltro: string[] = numero_cte
+      ? numero_cte.split(",").map((n: string) => n.trim()).filter(Boolean)
+      : [];
+
     const empresas = [1, 2];
     const todosCtesBsoft: BsoftCte[] = [];
 
@@ -44,8 +50,9 @@ export async function POST(req: Request) {
         const token = loginData.token || loginData.access_token;
         if (!token) continue;
 
+        // Só passa &numero= para a Bsoft quando for busca de número único
         let urlBusca = `${BSOFT_API_URL}/cte?data_inicial=${data_inicial}&data_final=${data_final}`;
-        if (numero_cte) urlBusca += `&numero=${numero_cte}`;
+        if (numerosFiltro.length === 1) urlBusca += `&numero=${numerosFiltro[0]}`;
 
         const cteReq = await fetch(urlBusca, {
           method: "GET",
@@ -68,8 +75,8 @@ export async function POST(req: Request) {
       }
     }
 
-    const ctesFiltrados = numero_cte
-      ? todosCtesBsoft.filter((c) => String(c.numero) === String(numero_cte))
+    const ctesFiltrados = numerosFiltro.length > 0
+      ? todosCtesBsoft.filter((c) => numerosFiltro.includes(String(c.numero)))
       : todosCtesBsoft;
 
     const numerosBsoft = ctesFiltrados.map((c) => String(c.numero));
