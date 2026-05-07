@@ -229,19 +229,25 @@ def processar_viagem_especifica(viagem_id):
             return
 
         entregas_geo = resolver_geocodificacao(entregas)
-        locais = [{"lat": lat_base, "lng": lng_base, "id": "BASE"}]
-        
+        locais = [{"lat": lat_base, "lng": lng_base, "ids": ["BASE"]}]
+
+        # Agrupa entregas com mesmo endereco (mesmas coordenadas) numa unica parada
+        grupos: dict = {}
         for e in entregas_geo:
-            # Se a entrega nÃ£o tiver lat/lng, o OSRM vai dar erro. 
-            # Garantimos que sÃ³ entram locais com coordenadas.
             if e.get("lat") and e.get("lng"):
-                locais.append({
-                    "lat": e["lat"], 
-                    "lng": e["lng"], 
-                    "id": e["id"], 
-                    "nf": e.get("numero_nf"), 
-                    "nome": e.get("cliente_nome")
-                })
+                chave = (round(float(e["lat"]), 5), round(float(e["lng"]), 5))
+                if chave not in grupos:
+                    grupos[chave] = []
+                grupos[chave].append(e)
+
+        for (lat, lng), grupo in grupos.items():
+            locais.append({
+                "lat": lat,
+                "lng": lng,
+                "ids": [e["id"] for e in grupo],
+                "nf": grupo[0].get("numero_nf"),
+                "nome": grupo[0].get("cliente_nome")
+            })
 
         if len(locais) <= 1: 
             logger.error("âŒ Nenhum local vÃ¡lido para roteirizar apÃ³s geocodificaÃ§Ã£o.")
@@ -270,23 +276,34 @@ def processar_viagem_especifica(viagem_id):
             logger.error("âŒ Otimizador OR-Tools nÃ£o encontrou uma soluÃ§Ã£o.")
             return
 
-        # Distancia operacional completa: Base -> entregas -> Base.
+        # Coleta sequencia da rota e calcula distancia total (Base -> entregas -> Base)
         distancia_total_metros = 0
+        rota_sequencia = []
         index = routing.Start(0)
-        ordem = 1
         while not routing.IsEnd(index):
             node = manager.IndexToNode(index)
             next_index = solution.Value(routing.NextVar(index))
             next_node = 0 if routing.IsEnd(next_index) else manager.IndexToNode(next_index)
             distancia_total_metros += matriz[node][next_node]
             if node != 0:
-                local = locais[node]
+                rota_sequencia.append(locais[node])
+            index = next_index
+
+        # Inverte a sequencia se a primeira parada for mais longe que a ultima:
+        # caminhao vai descarregando no trecho longo -> menos combustivel
+        if len(rota_sequencia) >= 2:
+            dist_primeira = haversine_metros(lat_base, lng_base, rota_sequencia[0]["lat"], rota_sequencia[0]["lng"])
+            dist_ultima = haversine_metros(lat_base, lng_base, rota_sequencia[-1]["lat"], rota_sequencia[-1]["lng"])
+            if dist_primeira > dist_ultima:
+                rota_sequencia.reverse()
+                logger.info("Rota invertida: entrega perto primeiro, longe por ultimo.")
+
+        for ordem, local in enumerate(rota_sequencia, start=1):
+            for id_entrega in local["ids"]:
                 supabase.table("entregas").update({
                     "ordem_entrega": ordem,
                     "status_entrega": "roteirizado",
-                }).eq("id", local["id"]).execute()
-                ordem += 1
-            index = next_index
+                }).eq("id", id_entrega).execute()
 
         # FinalizaÃ§Ã£o
         if usou_fallback:
