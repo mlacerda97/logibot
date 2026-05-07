@@ -144,19 +144,26 @@ export default function Home() {
     if (ctesList.length === 0) return;
     setImportando(true);
 
-    for (let i = 0; i < ctesList.length; i++) {
-      const cte = ctesList[i];
-      try {
-        await fetch("/api/bsoft/importar-xml", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          // AQUI ESTÁ A CORREÇÃO: O token agora vem do próprio objeto CTE!
-          body: JSON.stringify({ id_bsoft: cte.id, numero_cte: cte.numero, token: cte.token }),
-        });
-      } catch (error) {
-        console.error(`Falha no CTE ${cte.numero}`);
-      }
-      setProgresso(Math.round(((i + 1) / ctesList.length) * 100));
+    const LOTE = 5;
+    let processados = 0;
+
+    for (let i = 0; i < ctesList.length; i += LOTE) {
+      const lote = ctesList.slice(i, i + LOTE);
+      await Promise.all(
+        lote.map(async (cte) => {
+          try {
+            await fetch("/api/bsoft/importar-xml", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ id_bsoft: cte.id, numero_cte: cte.numero, token: cte.token }),
+            });
+          } catch (error) {
+            console.error(`Falha no CTE ${cte.numero}`);
+          }
+        })
+      );
+      processados += lote.length;
+      setProgresso(Math.round((processados / ctesList.length) * 100));
     }
     setImportando(false);
   };
