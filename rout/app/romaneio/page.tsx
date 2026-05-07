@@ -57,8 +57,7 @@ const calcPrazoBadge = (prazo: string | null): { label: string; cls: string } | 
   const dataPrazo = new Date(prazo + "T00:00:00");
   const diff = Math.floor((dataPrazo.getTime() - hoje.getTime()) / 86400000);
   if (diff < 0) return { label: `${Math.abs(diff)}d atrasado`, cls: "bg-red-100 text-red-700 border-red-200" };
-  if (diff <= 2) return { label: `${diff}d restante${diff !== 1 ? "s" : ""}`, cls: "bg-yellow-100 text-yellow-700 border-yellow-200" };
-  return { label: `${diff}d`, cls: "bg-green-100 text-green-700 border-green-200" };
+  return { label: `${diff}d pra vencer`, cls: diff <= 2 ? "bg-yellow-100 text-yellow-700 border-yellow-200" : "bg-green-100 text-green-700 border-green-200" };
 };
 
 const normalizarTexto = (texto: string = "") =>

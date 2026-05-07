@@ -424,6 +424,17 @@ export default function TorreDeControlePage() {
               <div key={i} className="h-64 bg-gray-200 rounded-[2rem]"></div>
             ))}
           </div>
+        ) : viagens.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-32 text-center">
+            <div className="w-24 h-24 bg-blue-50 rounded-[2rem] flex items-center justify-center mb-6 shadow-sm">
+              <Truck size={44} className="text-blue-300" />
+            </div>
+            <h2 className="text-2xl font-black text-gray-800 mb-2">Nenhuma viagem ativa</h2>
+            <p className="text-gray-400 font-medium mb-8 max-w-sm">Monte um romaneio para que as viagens apareçam aqui e você possa acompanhar em tempo real.</p>
+            <a href="/romaneio" className="bg-blue-600 hover:bg-blue-500 text-white font-black py-4 px-8 rounded-[1.5rem] shadow-lg flex items-center gap-3 transition-all active:scale-95">
+              <MapPin size={20} /> Montar Romaneio
+            </a>
+          </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {viagens.map((viagem) => (
