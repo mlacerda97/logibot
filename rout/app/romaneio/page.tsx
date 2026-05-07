@@ -17,7 +17,8 @@ import {
   MapPin,
   ListFilter,
   Search,
-  Plus
+  Plus,
+  Calendar
 } from "lucide-react";
 
 type RotaCidade = {
@@ -82,6 +83,11 @@ export default function RomaneioPage() {
   const [veiculos, setVeiculos] = useState<any[]>([]);
   const [motoristaId, setMotoristaId] = useState("");
   const [veiculoId, setVeiculoId] = useState("");
+  const [dataSaida, setDataSaida] = useState(() => {
+    const amanha = new Date();
+    amanha.setDate(amanha.getDate() + 1);
+    return amanha.toISOString().split("T")[0];
+  });
   const [salvando, setSalvando] = useState(false);
 
   const [modoEntrada, setModoEntrada] = useState<"imagem" | "manual" | "lista">("imagem");
@@ -350,7 +356,7 @@ export default function RomaneioPage() {
     try {
       const { data: novaViagem, error: erroViagem } = await supabase
         .from("viagens")
-        .insert([{ motorista_id: motoristaId, veiculo_id: veiculoId, data_saida: new Date().toISOString().split("T")[0], status: "em_montagem" }])
+        .insert([{ motorista_id: motoristaId, veiculo_id: veiculoId, data_saida: dataSaida, status: "em_montagem" }])
         .select()
         .single();
       if (erroViagem) throw erroViagem;
@@ -425,7 +431,7 @@ export default function RomaneioPage() {
         </div>
 
         <form onSubmit={criarViagem} className="space-y-8">
-          <div className="grid md:grid-cols-2 gap-6 bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100">
+          <div className="grid md:grid-cols-3 gap-6 bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100">
             <div className="relative group">
               <label className="flex items-center gap-2 text-sm font-bold text-gray-700 mb-3 ml-1"><User size={18} className="text-blue-600" /> Motorista</label>
               <select value={motoristaId} onChange={(e) => setMotoristaId(e.target.value)} className={inputStyle}>
@@ -441,6 +447,10 @@ export default function RomaneioPage() {
                 {veiculos.map((v) => <option key={v.id} value={v.id}>{v.placa} ({v.modelo})</option>)}
               </select>
               <ChevronDown className="absolute right-4 top-[46px] text-gray-400 pointer-events-none" size={20} />
+            </div>
+            <div>
+              <label className="flex items-center gap-2 text-sm font-bold text-gray-700 mb-3 ml-1"><Calendar size={18} className="text-blue-600" /> Data da Saída</label>
+              <input type="date" value={dataSaida} onChange={(e) => setDataSaida(e.target.value)} className={inputStyle} />
             </div>
           </div>
 
