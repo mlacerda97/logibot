@@ -61,6 +61,8 @@ export async function POST(req: Request) {
       endereco_texto = `${lgr}, ${nro} - ${bairro}, ${mun}/${uf}`;
     }
 
+    const prazo_entrega = xmlString.match(/<dPrev>(.*?)<\/dPrev>/)?.[1] || null;
+
     let inseridas = 0;
     for (const nf of chavesNFe) {
       const { data: existente } = await supabase
@@ -78,6 +80,7 @@ export async function POST(req: Request) {
             cliente_nome,
             endereco_texto,
             cep: cep || null,
+            prazo_entrega: prazo_entrega || null,
             status_entrega: "aguardando_roteirizacao"
           }
         ]);

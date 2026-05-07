@@ -50,6 +50,17 @@ type DestinoAvulso = {
 type DestinoAvulsoForm = Omit<DestinoAvulso, "id" | "enderecoTexto">;
 type ItemRomaneio = ({ tipo: "entrega" } & any) | ({ tipo: "manual" } & DestinoAvulso);
 
+const calcPrazoBadge = (prazo: string | null): { label: string; cls: string } | null => {
+  if (!prazo) return null;
+  const hoje = new Date();
+  hoje.setHours(0, 0, 0, 0);
+  const dataPrazo = new Date(prazo + "T00:00:00");
+  const diff = Math.floor((dataPrazo.getTime() - hoje.getTime()) / 86400000);
+  if (diff < 0) return { label: `${Math.abs(diff)}d atrasado`, cls: "bg-red-100 text-red-700 border-red-200" };
+  if (diff <= 2) return { label: `${diff}d restante${diff !== 1 ? "s" : ""}`, cls: "bg-yellow-100 text-yellow-700 border-yellow-200" };
+  return { label: `${diff}d`, cls: "bg-green-100 text-green-700 border-green-200" };
+};
+
 const normalizarTexto = (texto: string = "") =>
   texto
     .normalize("NFD")
@@ -508,9 +519,10 @@ export default function RomaneioPage() {
                           <div key={ent.id} onClick={() => toggleEntrega(ent)} className={`p-3 rounded-xl border-2 transition-all cursor-pointer ${entregasSelecionadas.includes(ent.id) ? "border-blue-600 bg-blue-50 shadow-sm" : "border-gray-100 hover:border-blue-200 bg-white"}`}>
                             <div className="flex justify-between items-start mb-1"><span className="text-[10px] font-black uppercase text-blue-600">CT-e: {ent.cte_origem}</span><div className={`w-4 h-4 rounded-full border-2 ${entregasSelecionadas.includes(ent.id) ? "bg-blue-600 border-blue-600" : "border-gray-300"}`} /></div>
                             <p className="text-xs font-bold text-gray-800 truncate">{ent.cliente_nome}</p>
-                            <div className="flex items-center gap-2 mt-1">
+                            <div className="flex items-center gap-2 mt-1 flex-wrap">
                               <span className="text-[9px] font-black text-gray-500 bg-gray-100 border border-gray-200 rounded px-1.5 py-0.5 uppercase">{ent.rota || "Sem rota"}</span>
                               <span className="text-[9px] font-black text-gray-500 bg-gray-100 border border-gray-200 rounded px-1.5 py-0.5 uppercase">{ent.cor || "Sem cor"}</span>
+                              {(() => { const b = calcPrazoBadge(ent.prazo_entrega); return b ? <span className={`text-[9px] font-black border rounded px-1.5 py-0.5 uppercase ${b.cls}`}>{b.label}</span> : null; })()}
                             </div>
                             <p className="text-[9px] text-gray-400 truncate mt-0.5">{ent.endereco_texto}</p>
                           </div>
