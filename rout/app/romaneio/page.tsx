@@ -256,8 +256,8 @@ export default function RomaneioPage() {
       });
       if (error) throw error;
 
-      // Zera lat/lng para o roteirizador re-geocodificar com o novo endereço
-      await supabase.from("entregas").update({ lat: null, lng: null }).eq("id", entregaParaEditar.id);
+      // Zera lat/lng e cep para o roteirizador re-geocodificar com o novo endereço
+      await supabase.from("entregas").update({ lat: null, lng: null, cep: null }).eq("id", entregaParaEditar.id);
 
       setEntregasEncontradas((prev) =>
         prev.map((ent) => (ent.id === entregaParaEditar.id ? { ...ent, endereco_texto: novoEndereco } : ent))
