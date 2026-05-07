@@ -3,16 +3,16 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import Link from "next/link";
-import { 
-  FileText, 
-  ArrowDownToLine, 
-  CheckCircle, 
-  X, 
-  MapPin, 
-  Calendar, 
-  Truck, 
-  User 
-} from "lucide-react"; 
+import {
+  FileText,
+  CheckCircle,
+  X,
+  MapPin,
+  Calendar,
+  Truck,
+  User,
+  PackageCheck
+} from "lucide-react";
 
 // NOVO: Importando o Widget de Alertas que criamos
 import WidgetAlertasFrota from "@/components/WidgetAlertasFrota";
@@ -44,6 +44,39 @@ export default function Home() {
   
   const hoje = new Date().toISOString().split('T')[0];
   const [dataFiltro, setDataFiltro] = useState(hoje);
+
+  const [entregasHoje, setEntregasHoje] = useState({ entregues: 0, total: 0 });
+
+  useEffect(() => {
+    const carregarEntregasHoje = async () => {
+      const inicioDia = `${hoje}T00:00:00`;
+      const fimDia = `${hoje}T23:59:59`;
+
+      const { data: viagens } = await supabase
+        .from("viagens")
+        .select("id")
+        .gte("data_saida", inicioDia)
+        .lte("data_saida", fimDia);
+
+      if (!viagens || viagens.length === 0) return;
+
+      const ids = viagens.map((v) => v.id);
+
+      const { data: entregas } = await supabase
+        .from("entregas")
+        .select("status_entrega")
+        .in("viagem_id", ids);
+
+      if (!entregas) return;
+
+      setEntregasHoje({
+        total: entregas.length,
+        entregues: entregas.filter((e) => e.status_entrega === "entregue").length,
+      });
+    };
+
+    carregarEntregasHoje();
+  }, [hoje]);
 
   // ==========================================
   // FUNÇÕES BSOFT (Ajustadas para Multi-Empresa)
@@ -152,7 +185,7 @@ export default function Home() {
 
       const { data, error } = await supabase
           .from("viagens")
-          .select(`*, motoristas(nome), veiculos(*)`)
+          .select(`*, motoristas(nome), veiculos(placa)`)
           .gte("data_saida", inicioDia)
           .lte("data_saida", fimDia)
           .order("created_at", { ascending: false });
@@ -177,13 +210,6 @@ export default function Home() {
       }
   };
 
-  const isViagemTerceiro = (viagem: any) => String(viagem?.veiculos?.tipo_frota || "proprio").toLowerCase() === "terceiro";
-  const valorKmTerceiro = (viagem: any) => Number(viagem?.veiculos?.valor_km_terceiro || 0);
-  const kmEstimado = (viagem: any) => Number(viagem?.km_total_estimado || 0);
-  const custoCombustivel = (viagem: any) => Number(viagem?.custo_diesel_estimado || 0);
-  const custoPrincipal = (viagem: any) => isViagemTerceiro(viagem) ? kmEstimado(viagem) * valorKmTerceiro(viagem) : custoCombustivel(viagem);
-  const labelCustoPrincipal = (viagem: any) => isViagemTerceiro(viagem) ? "Valor Viagem" : "Custo Est.";
-
   return (
     <main className="p-8 max-w-6xl mx-auto">
       <div className="mb-10">
@@ -196,17 +222,26 @@ export default function Home() {
       ========================================================= */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         
-        <Link href="/triagem">
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 cursor-pointer hover:border-blue-400 hover:shadow-md transition-all group">
-            <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                <ArrowDownToLine size={24} />
-            </div>
-            <div>
-                <p className="text-sm text-gray-500 font-medium group-hover:text-blue-600 transition-colors">Prontos para Triagem</p>
-                <p className="text-2xl font-bold text-gray-900">Acessar Menu</p>
-            </div>
-            </div>
-        </Link>
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
+          <div className="w-12 h-12 bg-green-50 text-green-600 rounded-full flex items-center justify-center">
+            <PackageCheck size={24} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-sm text-gray-500 font-medium">Entregas do Dia</p>
+            <p className="text-2xl font-bold text-gray-900">
+              {entregasHoje.entregues}
+              <span className="text-base font-medium text-gray-400"> / {entregasHoje.total}</span>
+            </p>
+            {entregasHoje.total > 0 && (
+              <div className="mt-2 w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                <div
+                  className="bg-green-500 h-1.5 rounded-full transition-all duration-500"
+                  style={{ width: `${Math.round((entregasHoje.entregues / entregasHoje.total) * 100)}%` }}
+                />
+              </div>
+            )}
+          </div>
+        </div>
 
         <div 
             onClick={abrirModalCargas}
@@ -410,8 +445,8 @@ export default function Home() {
                                               <p className="text-xs font-bold text-gray-500 flex items-center gap-2"><Truck size={14} className="text-gray-400"/> {viagem.veiculos?.placa || "Sem placa"}</p>
                                           </div>
                                           <div className="text-right">
-                                              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{labelCustoPrincipal(viagem)}</p>
-                                              <p className="text-sm font-black text-red-500">R$ {custoPrincipal(viagem).toLocaleString("pt-BR", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
+                                              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Custo Est.</p>
+                                              <p className="text-sm font-black text-red-500">R$ {viagem.custo_diesel_estimado?.toFixed(0) || 0}</p>
                                           </div>
                                       </div>
                                   </div>
