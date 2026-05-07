@@ -40,6 +40,8 @@ export default function FrotaPage() {
   const [novoModelo, setNovoModelo] = useState("");
   const [novoKmInicial, setNovoKmInicial] = useState("");
   const [novoConsumo, setNovoConsumo] = useState("2.5"); // NOVO: Estado para consumo médio
+  const [novoTipoFrota, setNovoTipoFrota] = useState<"proprio" | "terceiro">("proprio");
+  const [novoValorKmTerceiro, setNovoValorKmTerceiro] = useState("");
   const [salvandoNovo, setSalvandoNovo] = useState(false);
 
   // Modal de Status
@@ -59,6 +61,8 @@ export default function FrotaPage() {
   const [editPlaca, setEditPlaca] = useState("");
   const [editModelo, setEditModelo] = useState("");
   const [editConsumo, setEditConsumo] = useState(""); // NOVO: Estado para edição de consumo
+  const [editTipoFrota, setEditTipoFrota] = useState<"proprio" | "terceiro">("proprio");
+  const [editValorKmTerceiro, setEditValorKmTerceiro] = useState("");
   const [salvandoEdicao, setSalvandoEdicao] = useState(false);
 
   // Modal de Manutenção
@@ -111,17 +115,30 @@ export default function FrotaPage() {
   };
 
   const abrirModalNovo = () => {
-    setNovaPlaca(""); setNovoModelo(""); setNovoKmInicial(""); setNovoConsumo("2.5"); setIsModalNovoOpen(true);
+    setNovaPlaca("");
+    setNovoModelo("");
+    setNovoKmInicial("");
+    setNovoConsumo("2.5");
+    setNovoTipoFrota("proprio");
+    setNovoValorKmTerceiro("");
+    setIsModalNovoOpen(true);
   };
 
   const salvarNovoVeiculo = async (e: React.FormEvent) => {
     e.preventDefault(); setSalvandoNovo(true);
     try {
+      const valorKmTerceiro = novoTipoFrota === "terceiro" ? parseFloat(novoValorKmTerceiro.replace(",", ".")) : null;
+      if (novoTipoFrota === "terceiro" && (!valorKmTerceiro || valorKmTerceiro <= 0)) {
+        throw new Error("Informe o valor por KM do terceiro.");
+      }
+
       const { error } = await supabase.from("veiculos").insert([{ 
         placa: novaPlaca.toUpperCase(), 
         modelo: novoModelo, 
         km_atual: parseFloat(novoKmInicial) || 0, 
         consumo_medio: parseFloat(novoConsumo) || 2.5, // Salvando consumo
+        tipo_frota: novoTipoFrota,
+        valor_km_terceiro: valorKmTerceiro,
         status: 'ativo' 
       }]);
       if (error) throw error;
@@ -134,16 +151,25 @@ export default function FrotaPage() {
     setEditPlaca(veiculo.placa || ""); 
     setEditModelo(veiculo.modelo || ""); 
     setEditConsumo(veiculo.consumo_medio?.toString() || "2.5"); // Carregando consumo atual
+    setEditTipoFrota((veiculo.tipo_frota || "proprio") as "proprio" | "terceiro");
+    setEditValorKmTerceiro(veiculo.valor_km_terceiro?.toString() || "");
     setIsModalEditOpen(true);
   };
 
   const salvarEdicao = async (e: React.FormEvent) => {
     e.preventDefault(); setSalvandoEdicao(true);
     try {
+      const valorKmTerceiro = editTipoFrota === "terceiro" ? parseFloat(editValorKmTerceiro.replace(",", ".")) : null;
+      if (editTipoFrota === "terceiro" && (!valorKmTerceiro || valorKmTerceiro <= 0)) {
+        throw new Error("Informe o valor por KM do terceiro.");
+      }
+
       const { error } = await supabase.from("veiculos").update({ 
         placa: editPlaca.toUpperCase(), 
         modelo: editModelo,
-        consumo_medio: parseFloat(editConsumo) || 2.5 // Atualizando consumo
+        consumo_medio: parseFloat(editConsumo) || 2.5, // Atualizando consumo
+        tipo_frota: editTipoFrota,
+        valor_km_terceiro: valorKmTerceiro
       }).eq("id", veiculoSelecionado.id);
       if (error) throw error;
       alert("✅ Veículo atualizado!"); setIsModalEditOpen(false); carregarVeiculos();
@@ -288,6 +314,17 @@ export default function FrotaPage() {
                         </div>
                       </div>
 
+                      <div className="mt-2 flex items-center gap-2">
+                        <span className={`text-[10px] font-black uppercase tracking-wider px-2 py-1 rounded-full border ${veiculo.tipo_frota === "terceiro" ? "bg-purple-50 text-purple-700 border-purple-200" : "bg-blue-50 text-blue-700 border-blue-200"}`}>
+                          {veiculo.tipo_frota === "terceiro" ? "Terceiro" : "Proprio"}
+                        </span>
+                        {veiculo.tipo_frota === "terceiro" && (
+                          <span className="text-[10px] font-black uppercase tracking-wider px-2 py-1 rounded-full border bg-green-50 text-green-700 border-green-200">
+                            R$ {Number(veiculo.valor_km_terceiro || 0).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}/km
+                          </span>
+                        )}
+                      </div>
+
                       <div className="mt-4 grid grid-cols-2 gap-2">
                         <div className="flex items-center gap-2 bg-blue-50/50 p-3 rounded-xl border border-blue-50 text-blue-900">
                           <Gauge size={20} className="text-blue-500" />
@@ -358,10 +395,20 @@ export default function FrotaPage() {
             <form onSubmit={salvarNovoVeiculo} className="space-y-4">
               <div><label className="block text-sm font-bold text-gray-700 mb-2">Placa</label><input type="text" required value={novaPlaca} onChange={(e) => setNovaPlaca(e.target.value)} className="w-full uppercase p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 font-black"/></div>
               <div><label className="block text-sm font-bold text-gray-700 mb-2">Modelo</label><input type="text" required value={novoModelo} onChange={(e) => setNovoModelo(e.target.value)} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 font-bold"/></div>
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">Tipo de Frota</label>
+                <div className="grid grid-cols-2 gap-2">
+                  <button type="button" onClick={() => setNovoTipoFrota("proprio")} className={`p-3 rounded-xl border text-sm font-black transition-colors ${novoTipoFrota === "proprio" ? "bg-blue-50 border-blue-200 text-blue-700" : "bg-white border-gray-200 text-gray-600"}`}>Proprio</button>
+                  <button type="button" onClick={() => setNovoTipoFrota("terceiro")} className={`p-3 rounded-xl border text-sm font-black transition-colors ${novoTipoFrota === "terceiro" ? "bg-purple-50 border-purple-200 text-purple-700" : "bg-white border-gray-200 text-gray-600"}`}>Terceiro</button>
+                </div>
+              </div>
               <div className="grid grid-cols-2 gap-4">
                 <div><label className="block text-sm font-bold text-gray-700 mb-2">KM Inicial</label><input type="number" required value={novoKmInicial} onChange={(e) => setNovoKmInicial(e.target.value)} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl font-black"/></div>
                 <div><label className="block text-sm font-bold text-gray-700 mb-2">Consumo (km/l)</label><input type="number" step="0.1" required value={novoConsumo} onChange={(e) => setNovoConsumo(e.target.value)} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl font-black text-orange-600"/></div>
               </div>
+              {novoTipoFrota === "terceiro" && (
+                <div><label className="block text-sm font-bold text-gray-700 mb-2">Valor pago por KM (R$)</label><input type="number" step="0.01" min="0" required value={novoValorKmTerceiro} onChange={(e) => setNovoValorKmTerceiro(e.target.value)} className="w-full p-4 bg-green-50 border border-green-200 rounded-xl font-black text-green-700"/></div>
+              )}
               <button type="submit" disabled={salvandoNovo} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-xl shadow-md">{salvandoNovo ? "Cadastrando..." : "Cadastrar"}</button>
             </form>
           </div>
@@ -377,7 +424,17 @@ export default function FrotaPage() {
             <form onSubmit={salvarEdicao} className="space-y-4">
               <div><label className="block text-sm font-bold text-gray-700 mb-2">Placa</label><input type="text" required value={editPlaca} onChange={(e) => setEditPlaca(e.target.value)} className="w-full uppercase p-4 bg-gray-50 border border-gray-200 rounded-xl font-black"/></div>
               <div><label className="block text-sm font-bold text-gray-700 mb-2">Modelo</label><input type="text" required value={editModelo} onChange={(e) => setEditModelo(e.target.value)} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl font-bold"/></div>
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">Tipo de Frota</label>
+                <div className="grid grid-cols-2 gap-2">
+                  <button type="button" onClick={() => setEditTipoFrota("proprio")} className={`p-3 rounded-xl border text-sm font-black transition-colors ${editTipoFrota === "proprio" ? "bg-blue-50 border-blue-200 text-blue-700" : "bg-white border-gray-200 text-gray-600"}`}>Proprio</button>
+                  <button type="button" onClick={() => setEditTipoFrota("terceiro")} className={`p-3 rounded-xl border text-sm font-black transition-colors ${editTipoFrota === "terceiro" ? "bg-purple-50 border-purple-200 text-purple-700" : "bg-white border-gray-200 text-gray-600"}`}>Terceiro</button>
+                </div>
+              </div>
               <div><label className="block text-sm font-bold text-gray-700 mb-2">Consumo Médio (km/l)</label><input type="number" step="0.1" required value={editConsumo} onChange={(e) => setEditConsumo(e.target.value)} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl font-black text-orange-600"/></div>
+              {editTipoFrota === "terceiro" && (
+                <div><label className="block text-sm font-bold text-gray-700 mb-2">Valor pago por KM (R$)</label><input type="number" step="0.01" min="0" required value={editValorKmTerceiro} onChange={(e) => setEditValorKmTerceiro(e.target.value)} className="w-full p-4 bg-green-50 border border-green-200 rounded-xl font-black text-green-700"/></div>
+              )}
               <button type="submit" disabled={salvandoEdicao} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-xl shadow-md">{salvandoEdicao ? "Salvando..." : "Salvar"}</button>
             </form>
           </div>
